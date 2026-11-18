@@ -34,7 +34,7 @@ print(f"Vector store {vector_store.id}: {vector_store.status}")
 # Upload the performance data, for code interpreter
 with open("system_performance.csv", "rb") as f:
     data_file = openai_client.files.create(file=f, purpose="assistants")
-print(f"Uploaded {data_file.filename}")
+print(f"Uploaded {data_file.filename}") 
 
 # Create the agent: a model, instructions and two built-in tools
 agent = project_client.agents.create_version(
